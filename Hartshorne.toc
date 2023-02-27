@@ -1,0 +1,16 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Varieties}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Affine varieties}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Projective varieties}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Morphisms}{14}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Rational map}{22}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Nonsingular varieties}{24}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Nonsingular curves}{30}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Intersections in Projective spaces}{31}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Schemes}{35}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Sheaves}{35}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Scheme}{39}{section.2.2}%
+\contentsline {section}{\numberline {2.3}First properties of schemes}{47}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Separated and proper morphisms}{56}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Sheaves of Modules}{62}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Divisors}{66}{section.2.6}%

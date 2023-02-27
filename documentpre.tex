@@ -1,0 +1,332 @@
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks,linkcolor=blue,hyperfootnotes=false]{hyperref}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{textgreek,bm,upgreek,mathrsfs}
+\usepackage{array} %表格列宽操作
+\usepackage{longtable} %表格列宽对齐
+\usepackage{arydshln} %提供画线的虚线格式
+\usepackage{textcomp}
+\usepackage{stmaryrd}
+\expandafter\def\csname opt@stmaryrd.sty\endcsname
+{only,shortleftarrow,shortrightarrow}
+\usepackage{extpfeil}
+\usepackage{extarrows}
+\usepackage[bottom]{footmisc}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage[many]{tcolorbox}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{microtype} 
+\usepackage{float}
+\usepackage[framemethod=tikz]{mdframed} 
+\usepackage[tikz]{bclogo}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{epigraph}
+\usepackage[many]{tcolorbox}
+\usepackage{tikz-cd}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{booktabs}
+\usepackage[
+ordering=Kac,
+edge-length=1cm,
+root-radius=.06cm]{dynkin-diagrams}
+\usepackage{bbold}
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath}
+\usepackage{palatino}
+\usepackage{l3draw,xparse}
+\usepackage{scalerel} %放大数学字体
+
+\usetikzlibrary{calc}
+\linespread{1.05}
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{bending}
+\geometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+\pagestyle{fancy}
+\setlength{\headheight}{15.0pt}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\bf\nouppercase{\rightmark}}
+\fancyhead[LO]{\bf\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\DeclareMathAlphabet{\mathbbb}{U}{bbold}{m}{n}
+\DeclareMathAlphabet{\mathbb}{U}{msb}{m}{n}
+
+\makeatletter
+\def\pgf@stroke@inner@line{%
+  \let\pgf@temp@save=\pgf@strokecolor@global
+  \pgfsys@beginscope%
+  {%
+    \pgfsys@roundcap% <-- I add this
+    \pgfsys@setlinewidth{\pgfinnerlinewidth}%
+    \pgfsetstrokecolor{\pgfinnerstrokecolor}%
+    \pgfsyssoftpath@invokecurrentpath%
+    \pgfsys@stroke%
+  }%
+  \pgfsys@endscope%
+  \global\let\pgf@strokecolor@global=\pgf@temp@save
+}
+\makeatother
+
+\def\hash{\!\textit{\texttt{\#}}}
+\def\sub{\subseteq}
+\def\sups{\supseteq}
+\def\emp{\varnothing}
+\def\dom{\mathrm{dom}}
+\def\codom{\mathrm{codom}}
+\def\End{\mathrm{End}}
+\def\Hom{\mathrm{Hom}}
+\def\Mor{\mathrm{Mor}}
+\def\Obj{\mathrm{Obj}}
+\def\Aut{\mathrm{Aut}}
+\def\det{\mathrm{det}}
+\def\ker{\mathrm{ker}\,}
+\def\coker{\mathrm{coker}\,}
+\def\im{\mathrm{im}\,}
+\def\coim{\mathrm{coim}\,}
+\def\id{\mathrm{id}}
+\def\supp{\mathrm{supp}}
+\def\conv{\mathrm{conv}}
+\def\mult{\mathrm{mult}}
+\def\Int{\mathrm{Int}\,}
+\def\Homgr{\mathrm{Homgr}}
+\def\Sh{\mathrm{Sh}}
+\def\Lib{\mathrm{Lib}}
+\def\C{\mathbb{C}}
+\def\F{\mathbb{F}}
+\def\K{\mathbb{K}}
+\def\R{\mathbb{R}}
+\def\A{\mathbb{A}}
+\def\B{\mathbb{B}}
+\def\Q{\mathbb{Q}}
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\E{\mathrm{E}}
+\def\T{\mathbb{T}}
+\def\H{\mathbb{H}}
+\def\RP{\mathbb{R}P}
+\def\CP{\mathbb{C}P}
+\def\P{\mathbb{P}}
+\def\m{\mathfrak{m}}
+\def\n{\mathfrak{n}}
+\def\p{\mathfrak{p}}
+\def\q{\mathfrak{q}}
+\def\a{\mathfrak{a}}
+\def\b{\mathfrak{b}}
+\def\c{\mathfrak{c}}
+\def\g{\mathfrak{g}}
+\def\h{\mathfrak{h}}
+\def\d{\mathfrak{d}}
+\def\s{\mathfrak{s}}
+\def\z{\mathfrak{z}}
+\def\l{\mathfrak{l}}
+\def\r{\mathfrak{r}}
+\def\k{\mathfrak{k}}
+\def\t{\mathfrak{t}}
+\def\f{\mathfrak{f}}
+\def\x{\mathfrak{x}}
+\def\st{\mathfrak{st}}
+\def\aff{\mathfrak{aff}}
+\def\GL{\mathrm{GL}}
+\def\PGL{\mathrm{PGL}}
+\def\SL{\mathrm{SL}}
+\def\O{\mathrm{O}}
+\def\SO{\mathrm{SO}}
+\def\Sp{\mathrm{Sp}}
+\def\U{\mathrm{U}}
+\def\SU{\mathrm{SU}}
+\def\gl{\mathfrak{gl}}
+\def\sl{\mathfrak{sl}}
+\def\o{\mathfrak{o}}
+\def\so{\mathfrak{so}}
+\def\u{\mathfrak{u}}
+\def\su{\mathfrak{su}}
+\def\Lie{\mathfrak{Lie}}
+\def\Ad{\mathrm{Ad}}
+\def\ad{\mathrm{ad}}
+\def\Der{\mathrm{Der}}
+\def\nil{\mathfrak{nil}}
+\def\rad{\mathfrak{rad}}
+\def\eff{\mathfrak{eff}}
+\def\reg{\mathrm{reg}}
+\def\aff{\mathfrak{aff}}
+\def\div{\mathrm{div}}
+\def\Sym{\mathrm{Sym}}
+\def\Stab{\mathrm{Stab}}
+\def\Tor{\mathrm{Tor}}
+\def\Ext{\mathrm{Ext}}
+\def\tr{\mathrm{tr}}
+\def\pd{\mathrm{pd}}
+\def\gr{\mathrm{gr}}
+\def\lcm{\mathrm{lcm}}
+\def\codim{\mathrm{codim}}
+\def\gldim{\mathrm{gldim}}
+\def\rank{\mathrm{rank}}
+\def\char{\mathrm{char}}
+\def\cl{\mathrm{cl}}
+\def\Cl{\mathrm{Cl}}
+\def\height{\mathrm{ht}}
+\def\coht{\mathrm{coht}}
+\def\depth{\mathrm{depth}}
+\def\sgn{\mathrm{sgn}}
+\def\res{\mathrm{res}}
+\def\Res{\mathrm{Res}}
+\def\Alt{\mathrm{Alt}}
+\def\Gal{\mathrm{Gal}}
+\def\Inv{\mathrm{Inv}}
+\def\Inn{\mathrm{Inn}}
+\def\Ann{\mathrm{Ann}}
+\def\Ass{\mathrm{Ass}}
+\def\Spec{\mathrm{Spec}}
+\def\Proj{\mathrm{Proj}}
+\def\Max{\mathrm{Max}}
+\def\Ind{\mathrm{Ind}}
+\def\CoInd{\mathrm{CoInd}}
+\def\Div{\mathrm{Div}}
+\def\Pic{\mathrm{Pic}}
+\def\sep{\mathrm{sep}}
+\def\isep{\mathrm{isep}}
+\def\Soc{\mathrm{Soc}}
+\def\Rad{\mathrm{Rad}}
+\def\red{\mathrm{red}}
+\def\dev{\mathrm{dev}}
+
+\def\dcheck{\check{ }\hspace{4pt}\check{}}
+
+\def\eps{\varepsilon}
+\def\And{\hspace{8pt}\text{and}\hspace{8pt}}
+\def\for{\hspace{8pt}\text{for}\hspace{6pt}}
+\def\llim{\varprojlim\limits}
+\def\rlim{\varinjlim\limits}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\DeclareMathOperator{\sHom}{\mathcal{H\mkern-7mu o\mkern-2.5mu m\mkern-1.5mu}}
+\DeclareMathOperator{\sExt}{\mathcal{E\mkern-4.5mu x\mkern-2.5mu t\mkern-1mu}}
+\DeclareMathOperator{\sEnd}{\mathcal{E\mkern-4mu n\mkern-4.5mu d\mkern-1mu}}
+
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+\makeatletter
+\@addtoreset{figure}{section}
+\makeatother
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\newcommand{\bigw}{\scalebox{.95}[1]{\boldmath{$\bigwedge$}\hspace{-1pt}}}
+
+\makeatletter
+\let\save@mathaccent\mathaccent
+\newcommand*\if@single[3]{%
+  \setbox0\hbox{${\mathaccent"0362{#1}}^H$}%
+  \setbox2\hbox{${\mathaccent"0362{\kern0pt#1}}^H$}%
+  \ifdim\ht0=\ht2 #3\else #2\fi
+  }
+%The bar will be moved to the right by a half of \macc@kerna, which is computed by amsmath:
+\newcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+%If there's a superscript following the bar, then no negative kern may follow the bar;
+%an additional {} makes sure that the superscript is high enough in this case:
+\newcommand*\widebar[1]{\@ifnextchar^{{\wide@bar{#1}{0}}}{\wide@bar{#1}{1}}}
+%Use a separate algorithm for single symbols:
+\newcommand*\wide@bar[2]{\if@single{#1}{\wide@bar@{#1}{#2}{1}}{\wide@bar@{#1}{#2}{2}}}
+\newcommand*\wide@bar@[3]{%
+  \begingroup
+  \def\mathaccent##1##2{%
+%Enable nesting of accents:
+    \let\mathaccent\save@mathaccent
+%If there's more than a single symbol, use the first character instead (see below):
+    \if#32 \let\macc@nucleus\first@char \fi
+%Determine the italic correction:
+    \setbox\z@\hbox{$\macc@style{\macc@nucleus}_{}$}%
+    \setbox\tw@\hbox{$\macc@style{\macc@nucleus}{}_{}$}%
+    \dimen@\wd\tw@
+    \advance\dimen@-\wd\z@
+%Now \dimen@ is the italic correction of the symbol.
+    \divide\dimen@ 3
+    \@tempdima\wd\tw@
+    \advance\@tempdima-\scriptspace
+%Now \@tempdima is the width of the symbol.
+    \divide\@tempdima 10
+    \advance\dimen@-\@tempdima
+%Now \dimen@ = (italic correction / 3) - (Breite / 10)
+    \ifdim\dimen@>\z@ \dimen@0pt\fi
+%The bar will be shortened in the case \dimen@<0 !
+    \rel@kern{0.6}\kern-\dimen@
+    \if#31
+      \overline{\rel@kern{-0.6}\kern\dimen@\macc@nucleus\rel@kern{0.4}\kern\dimen@}%
+      \advance\dimen@0.4\dimexpr\macc@kerna
+%Place the combined final kern (-\dimen@) if it is >0 or if a superscript follows:
+      \let\final@kern#2%
+      \ifdim\dimen@<\z@ \let\final@kern1\fi
+      \if\final@kern1 \kern-\dimen@\fi
+    \else
+      \overline{\rel@kern{-0.6}\kern\dimen@#1}%
+    \fi
+  }%
+  \macc@depth\@ne
+  \let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+  \mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+  \macc@set@skewchar\relax
+  \let\mathaccentV\macc@nested@a
+%The following initialises \macc@kerna and calls \mathaccent:
+  \if#31
+    \macc@nested@a\relax111{#1}%
+  \else
+%If the argument consists of more than one symbol, and if the first token is
+%a letter, use that letter for the computations:
+    \def\gobble@till@marker##1\endmarker{}%
+    \futurelet\first@char\gobble@till@marker#1\endmarker
+    \ifcat\noexpand\first@char A\else
+      \def\first@char{}%
+    \fi
+    \macc@nested@a\relax111{\first@char}%
+  \fi
+  \endgroup
+}
+\makeatother
+
+\ExplSyntaxOn
+%---------------------------------------------------------
+\fp_new:N \l__expl_shuffle_fp
+
+\cs_new_protected:Nn \expl_shuffle:
+ {
+  \draw_begin:
+  \draw_linewidth:n { \l__expl_shuffle_fp }
+  \draw_cap_round:
+  \draw_join_round:
+  \draw_path_moveto:n { 0.0ex , 1.0ex }
+  \draw_path_lineto:n { 0.0ex , 0.0ex }
+  \draw_path_lineto:n { 1.75ex , 0.0ex }
+  \draw_path_lineto:n { 1.75ex , 1.0ex }
+  \draw_path_use_clear:n { stroke }
+  \draw_path_moveto:n { 0.875ex , 0.0ex }
+  \draw_path_lineto:n { 0.875ex , 1.0ex }
+  \draw_path_use_clear:n { stroke }
+  \draw_end:
+ }
+\NewDocumentCommand{\shuffle}{}
+ {
+  \mathrel
+   {
+    \fp_set:Nn \l__expl_shuffle_fp { 0.08ex }
+    \text{$\mspace{1mu}$ \expl_shuffle: $\mspace{1mu}$}
+   }
+ }
+%---------------------------------------------------------
+\ExplSyntaxOff
+
+
